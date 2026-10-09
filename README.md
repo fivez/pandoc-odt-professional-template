@@ -13,7 +13,7 @@ A clean, professional template and workflow configuration to convert Markdown do
 Make sure you have the following tools installed on your system:
 - **Pandoc** (v2.11 or higher recommended)
 - **LibreOffice** (used in headless mode by Pandoc to process the ODT styles)
-- **A PDF Engine** (such as XeLaTeX, LuaLaTeX, or Typst depending on your setup)
+- **typst**
 
 ## Project Structure
 
@@ -23,5 +23,7 @@ Make sure you have the following tools installed on your system:
 ├── examples/
 │   ├── input.md           # Sample Markdown source
 │   └── output.pdf         # Generated PDF result
-├── Makefile               # Build automation script
 └── README.md
+
+## Command
+pandoc "my-markdown-file.md"  -o output.docx --lua-filter=custom_styles.lua --reference-doc=template.odt 
